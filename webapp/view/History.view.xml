@@ -1,0 +1,23 @@
+<mvc:View
+  controllerName="expensetracker.controller.History"
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns="sap.m"
+  displayBlock="true">
+
+  <Page title="Expense history" class="sapUiContentPadding">
+    <content>
+      <SearchField id="historySearch" placeholder="Search by note or category" liveChange="onSearch" width="100%" class="sapUiSmallMarginBottom" />
+      <List id="historyList" items="{mock>/expenseRows}" noDataText="No expenses match your search">
+        <CustomListItem>
+          <HBox justifyContent="SpaceBetween" class="sapUiSmallMargin" alignItems="Center" width="100%">
+            <VBox>
+              <Text text="{mock>note}" />
+              <Text text="{mock>day} • {mock>category}" class="sapUiTinyMarginTop" />
+            </VBox>
+            <Text text="{= '₹' + ${mock>amount} }" />
+          </HBox>
+        </CustomListItem>
+      </List>
+    </content>
+  </Page>
+</mvc:View>

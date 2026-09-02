@@ -1,0 +1,28 @@
+<mvc:View
+  controllerName="expensetracker.controller.Budgets"
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns="sap.m"
+  displayBlock="true">
+
+  <Page title="Budgets" class="sapUiContentPadding">
+    <content>
+      <List headerText="{mock>/month} budget usage" items="{mock>/budgets}">
+        <CustomListItem>
+          <VBox class="sapUiSmallMargin">
+            <HBox justifyContent="SpaceBetween">
+              <Text text="{mock>category}" />
+              <ObjectStatus
+                text="{= '₹' + ${mock>spent} + ' of ₹' + ${mock>limit} }"
+                state="{mock>state}" />
+            </HBox>
+            <ProgressIndicator
+              percentValue="{= Math.min(100, Math.round(${mock>spent} / ${mock>limit} * 100)) }"
+              displayValue="{= Math.round(${mock>spent} / ${mock>limit} * 100) }%"
+              state="{mock>state}"
+              class="sapUiTinyMarginTop" />
+          </VBox>
+        </CustomListItem>
+      </List>
+    </content>
+  </Page>
+</mvc:View>

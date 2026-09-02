@@ -1,0 +1,43 @@
+<mvc:View
+  controllerName="expensetracker.controller.AddExpense"
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns="sap.m"
+  xmlns:f="sap.ui.layout.form"
+  displayBlock="true">
+
+  <Page title="Add expense" showNavButton="true" navButtonPress="onNavBack" class="sapUiContentPadding">
+    <content>
+      <f:SimpleForm editable="true" layout="ResponsiveGridLayout" labelSpanXL="3" labelSpanL="3" labelSpanM="12" labelSpanS="12">
+        <Label text="Amount" />
+        <Input id="amountInput" type="Number" placeholder="0.00" />
+
+        <Label text="Date" />
+        <DatePicker id="dateInput" valueFormat="yyyy-MM-dd" displayFormat="dd MMM yyyy" />
+
+        <Label text="Category" />
+        <SegmentedButton id="categorySelect" selectedKey="Food">
+          <items>
+            <SegmentedButtonItem key="Food" text="Food" icon="sap-icon://meal" />
+            <SegmentedButtonItem key="Travel" text="Travel" icon="sap-icon://travel-itinerary" />
+            <SegmentedButtonItem key="Accommodation" text="Stay" icon="sap-icon://home" />
+            <SegmentedButtonItem key="Others" text="Others" icon="sap-icon://overflow" />
+          </items>
+        </SegmentedButton>
+
+        <Label text="Payment mode" />
+        <Select id="paymentSelect">
+          <items>
+            <core:Item xmlns:core="sap.ui.core" key="UPI" text="UPI" />
+            <core:Item xmlns:core="sap.ui.core" key="Card" text="Card" />
+            <core:Item xmlns:core="sap.ui.core" key="Cash" text="Cash" />
+          </items>
+        </Select>
+
+        <Label text="Note" />
+        <Input id="noteInput" placeholder="e.g. Lunch with team" />
+      </f:SimpleForm>
+
+      <Button text="Save expense" type="Emphasized" press="onSaveExpense" width="100%" class="sapUiMediumMarginTop" />
+    </content>
+  </Page>
+</mvc:View>

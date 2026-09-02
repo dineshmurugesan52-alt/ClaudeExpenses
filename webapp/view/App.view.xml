@@ -1,0 +1,34 @@
+<mvc:View
+  controllerName="expensetracker.controller.App"
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns="sap.tnt"
+  xmlns:m="sap.m"
+  xmlns:core="sap.ui.core"
+  displayBlock="true">
+
+  <ToolPage id="toolPage">
+    <header>
+      <ToolHeader>
+        <m:Button icon="sap-icon://menu2" press="onToggleSideNav" type="Transparent" />
+        <m:Title text="Smart Expense Tracker" level="H1" class="sapUiTinyMarginBegin" />
+        <m:ToolbarSpacer />
+        <m:Avatar initials="SA" displaySize="XS" />
+      </ToolHeader>
+    </header>
+
+    <sideContent>
+      <SideNavigation id="sideNav" selectedKey="dashboard" itemSelect="onNavItemSelect">
+        <NavigationList>
+          <NavigationListItem key="dashboard" text="Dashboard" icon="sap-icon://home" />
+          <NavigationListItem key="addExpense" text="Add expense" icon="sap-icon://add" />
+          <NavigationListItem key="budgets" text="Budgets" icon="sap-icon://money-bills" />
+          <NavigationListItem key="history" text="History" icon="sap-icon://history" />
+        </NavigationList>
+      </SideNavigation>
+    </sideContent>
+
+    <mainContents>
+      <m:NavContainer id="navContainer" />
+    </mainContents>
+  </ToolPage>
+</mvc:View>

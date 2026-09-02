@@ -1,0 +1,73 @@
+{
+  "_version": "1.85.0",
+  "sap.app": {
+    "id": "expensetracker",
+    "type": "application",
+    "title": "Smart Expense Tracker",
+    "applicationVersion": { "version": "1.0.0" },
+    "dataSources": {
+      "expenseService": {
+        "uri": "/odata/v4/expense/",
+        "type": "OData",
+        "settings": { "odataVersion": "4.0" }
+      }
+    }
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "deviceTypes": { "desktop": true, "tablet": true, "phone": true },
+    "contentDensities": { "compact": true, "cozy": true }
+  },
+  "sap.ui5": {
+    "contentDensities": {
+    "compact": true,
+    "cozy": true
+  },
+    "rootView": {
+      "viewName": "expensetracker.view.App",
+      "type": "XML",
+      "id": "app"
+    },
+    "dependencies": {
+      "minUI5Version": "1.120.0",
+      "libs": {
+        "sap.m": {},
+        "sap.f": {},
+        "sap.tnt": {},
+        "sap.ui.core": {},
+        "sap.viz": {}
+      }
+    },
+    "models": {
+      "i18n": { "type": "sap.ui.model.resource.ResourceModel", "settings": { "bundleName": "expensetracker.i18n.i18n" } },
+      "expense": {
+        "dataSource": "expenseService",
+        "preload": true,
+        "settings": { "synchronizationMode": "None", "operationMode": "Server", "autoExpandSelect": true }
+      }
+    },
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "viewType": "XML",
+        "viewPath": "expensetracker.view",
+        "controlAggregation": "pages",
+        "controlId": "navContainer",
+        "transition": "slide",
+        "async": true
+      },
+      "routes": [
+        { "pattern": "", "name": "dashboard", "target": "dashboard" },
+        { "pattern": "add-expense", "name": "addExpense", "target": "addExpense" },
+        { "pattern": "budgets", "name": "budgets", "target": "budgets" },
+        { "pattern": "history", "name": "history", "target": "history" }
+      ],
+      "targets": {
+        "dashboard":  { "viewName": "Dashboard",  "viewLevel": 1 },
+        "addExpense": { "viewName": "AddExpense", "viewLevel": 2 },
+        "budgets":    { "viewName": "Budgets",    "viewLevel": 1 },
+        "history":    { "viewName": "History",    "viewLevel": 1 }
+      }
+    }
+  }
+}
