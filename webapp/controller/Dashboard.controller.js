@@ -10,6 +10,7 @@ sap.ui.define([
       // Once the CAP service is live, bind the view to the "expense" OData
       // model instead of "mock", e.g.:
       // this.getView().setModel(this.getOwnerComponent().getModel("expense"));
+      console.log("Dashboard controller initialized");
     },
 
     onPrevMonth: function () {
