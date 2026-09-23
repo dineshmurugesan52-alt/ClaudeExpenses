@@ -8,21 +8,21 @@
 
   <ToolPage id="toolPage">
     <header>
-      <ToolHeader>
-        <m:Button icon="sap-icon://menu2" press="onToggleSideNav" type="Transparent" />
-        <m:Title text="Smart Expense Tracker" level="H1" class="sapUiTinyMarginBegin" />
-        <m:ToolbarSpacer />
-        <m:Avatar initials="SA" displaySize="XS" />
+      <ToolHeader id="_IDGenToolHeader">
+        <m:Button id="_IDGenButton" icon="sap-icon://menu2" press="onToggleSideNav" type="Transparent" />
+        <m:Title id="_IDGenTitle" text="Smart Expense Tracker" level="H1" class="sapUiTinyMarginBegin" />
+        <m:ToolbarSpacer id="_IDGenToolbarSpacer" />
+        <m:Avatar id="_IDGenAvatar1" initials="SA" displaySize="XS" />
       </ToolHeader>
     </header>
 
     <sideContent>
       <SideNavigation id="sideNav" selectedKey="dashboard" itemSelect="onNavItemSelect">
-        <NavigationList>
-          <NavigationListItem key="dashboard" text="Dashboard" icon="sap-icon://home" />
-          <NavigationListItem key="addExpense" text="Add expense" icon="sap-icon://add" />
-          <NavigationListItem key="budgets" text="Budgets" icon="sap-icon://money-bills" />
-          <NavigationListItem key="history" text="History" icon="sap-icon://history" />
+        <NavigationList id="_IDGenNavigationList">
+          <NavigationListItem id="_IDGenNavigationListItem" key="dashboard" text="Dashboard" icon="sap-icon://home" />
+          <NavigationListItem id="_IDGenNavigationListItem1" key="addExpense" text="Add expense" icon="sap-icon://add" />
+          <NavigationListItem id="_IDGenNavigationListItem2" key="budgets" text="Budgets" icon="sap-icon://money-bills" />
+          <NavigationListItem id="_IDGenNavigationListItem3" key="history" text="History" icon="sap-icon://history" />
         </NavigationList>
       </SideNavigation>
     </sideContent>

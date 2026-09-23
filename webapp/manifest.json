@@ -19,6 +19,7 @@
     "contentDensities": { "compact": true, "cozy": true }
   },
   "sap.ui5": {
+    "flexEnabled": true,
     "contentDensities": {
     "compact": true,
     "cozy": true
@@ -33,7 +34,6 @@
       "libs": {
         "sap.m": {},
         "sap.f": {},
-        "sap.tnt": {},
         "sap.ui.core": {},
         "sap.viz": {}
       }

@@ -5,7 +5,7 @@
   xmlns:f="sap.ui.layout.form"
   displayBlock="true">
 
-  <Page title="Add expense" showNavButton="true" navButtonPress="onNavBack" class="sapUiContentPadding">
+  <Page title="Add expense" showNavButton="true" navButtonPress="onNavBack" >
     <content>
       <f:SimpleForm editable="true" layout="ResponsiveGridLayout" labelSpanXL="3" labelSpanL="3" labelSpanM="12" labelSpanS="12">
         <Label text="Amount" />

@@ -8,7 +8,7 @@
   xmlns:vizFeed="sap.viz.ui5.controls.common.feeds"
   displayBlock="true">
 
-  <Page title="Smart Expense Tracker" class="sapUiContentPadding">
+  <Page title="Smart Expense Tracker" >
 
     <headerContent>
       <Button icon="sap-icon://navigation-left-arrow" press="onPrevMonth" />
@@ -19,7 +19,7 @@
 
     <content>
 
-      <!-- Summary tiles -->
+      <!-- Summary tiles updated -->
       <f:GridContainer>
         <f:items>
           <GenericTile header="Total food" subheader="This month" class="sapUiTinyMarginEnd">
